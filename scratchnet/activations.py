@@ -24,3 +24,9 @@ class Sigmoid(object):
         output = self(Y)
         return output * (1 - output)
 
+class Identity(object):
+	def __call__(self, a):
+	    return a
+
+	def gradient(self, a):
+		return np.ones_like(a)
